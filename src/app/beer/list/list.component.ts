@@ -102,6 +102,11 @@ export class ListComponent extends BaseListComponent<BeerModel> implements OnIni
     });
   }
 
+  public onClearSearch() {
+    this.searchString = '';
+    this.processData();
+  }
+
   chosenYearHandler(normalizedYear: Moment) {
     const ctrlValue = this.timeSelection.value;
     ctrlValue.year(normalizedYear.year());

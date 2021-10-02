@@ -19,11 +19,13 @@
                 border: none;
                 padding: 14px;
                 margin-left: 5px;
+                cursor: pointer;
             }
             .close {
                 position: absolute;
                 right: 10px;
                 top: -15px;
+                cursor: pointer;
             }
         }
         &__datePicker {

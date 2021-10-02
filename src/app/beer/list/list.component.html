@@ -2,14 +2,15 @@
     <div class="pre-header">
         <div class="pre-header__serach">
             <mat-form-field class="input" appearance="fill">
+                <mat-label>Search by name</mat-label>
                 <input matInput type="text" [(ngModel)]="searchString">
-                <button class="close" *ngIf="searchString" matSuffix mat-icon-button aria-label="Clear" (click)="searchString=''">X</button>
+                <button class="close" *ngIf="searchString" matSuffix mat-icon-button aria-label="Clear" (click)="onClearSearch()">X</button>
             </mat-form-field>
             <button class="button" (click)="onSearchItem()">Search</button>
         </div>
         <div class="pre-header__datePicker">
             <mat-form-field appearance="fill">
-                <mat-label>Month and Year</mat-label>
+                <mat-label>Filter by brewed before</mat-label>
                 <input matInput [matDatepicker]="dp" [formControl]="timeSelection">
                 <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
                 <mat-datepicker #dp
