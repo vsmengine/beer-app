@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     BeerRoutingModule,
     MatCardModule,
     MatPaginatorModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: []

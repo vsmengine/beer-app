@@ -1,4 +1,25 @@
 .container {
+    .pre-header {
+        padding: 20px;
+        &__serach {
+            .mat-form-field-flex {
+                padding: 0 !important;
+            }
+            .button  {
+                background: #ccc;
+                height: 41px;
+                border: none;
+                padding: 14px;
+                margin-left: 5px;
+            }
+            .close {
+                position: absolute;
+                right: 10px;
+                top: -15px;
+            }
+        }
+    }
+
     .list{
         padding: 20px;
         &__wrapper {

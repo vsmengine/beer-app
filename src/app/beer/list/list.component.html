@@ -1,4 +1,14 @@
 <section class="container">
+    <div class="pre-header">
+        <div class="pre-header__serach">
+            <mat-form-field class="input" appearance="fill">
+                <input matInput type="text" [(ngModel)]="searchString">
+                <button class="close" *ngIf="searchString" matSuffix mat-icon-button aria-label="Clear" (click)="searchString=''">X</button>
+            </mat-form-field>
+            <button class="button" (click)="onSearchItem()">Search</button>
+        </div>
+    </div>
+
     <div class="list">
         <div class="list__wrapper">
             <mat-card class="list__item" *ngFor="let item of listData" (click)="onMoveToItem(item)">
