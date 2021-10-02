@@ -1,0 +1,76 @@
+.container {
+    .pre-header {
+        padding: 20px;
+        &__serach {
+            .mat-form-field-flex {
+                padding: 0 !important;
+            }
+            .button  {
+                background: #ccc;
+                height: 41px;
+                border: none;
+                padding: 14px;
+                margin-left: 5px;
+            }
+            .close {
+                position: absolute;
+                right: 10px;
+                top: -15px;
+            }
+        }
+    }
+
+    .list{
+        padding: 20px;
+        &__wrapper {
+            display: grid;
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
+
+            /* Extra small devices (small mobile phones and up) */
+            @media only screen and (min-width: 320px) {
+                grid-template-columns: 100%;
+                width: 100%;
+            }
+        
+            /* Small devices (portrait tablets, mobile phones and up) */
+            @media only screen and (min-width: 568px) {
+                grid-template-columns: 50% 50%;
+                width: calc(100% - 60px);
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                grid-template-columns: 33.33% 33.33% 33.33%;
+                width: calc(100% - 80px);
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                grid-template-columns: 25% 25% 25% 25%;
+                width: calc(100% - 100px);
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                grid-template-columns: 20% 20% 20% 20% 20%;
+                width: calc(100% - 120px);
+            } 
+        }
+        &__item {
+            padding: 15px;
+            .image {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                height: 225px;
+                width: 100%;
+                img {
+                    display: flex;
+                    height: 100%;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

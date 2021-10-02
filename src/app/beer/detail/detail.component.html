@@ -1,0 +1,22 @@
+<section class="container">
+    <div class="detail">
+        <div class="detail__wrapper" *ngIf="itemData">
+            <div class="detail__image">
+                <img src="{{itemData.image_url}}" alt="Photo of a beer">
+            </div>
+            <div class="detail__info">
+                <h2>{{itemData.name}}</h2>
+                <p>{{itemData.description}}<p>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel">
+        <carousel>
+            <div class="carousel-cell" *ngFor="let item of similarData">
+                <img src="{{item.image_url}}" (click)="onMoveToItem(item)">
+                <span>name</span>
+            </div>
+        </carousel>
+    </div>
+</section>
