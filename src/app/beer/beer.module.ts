@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     FormsModule,
     BeerRoutingModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: []

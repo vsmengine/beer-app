@@ -10,4 +10,13 @@
             </div>
         </div>
     </div>
+
+    <div class="carousel">
+        <carousel>
+            <div class="carousel-cell" *ngFor="let item of similarData">
+                <img src="{{item.image_url}}" (click)="onMoveToItem(item)">
+                <span>name</span>
+            </div>
+        </carousel>
+    </div>
 </section>
