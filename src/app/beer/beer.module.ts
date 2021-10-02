@@ -5,10 +5,13 @@ import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import {MatInputModule} from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,11 @@ import {MatInputModule} from '@angular/material/input';
     MatCardModule,
     MatPaginatorModule,
     IvyCarouselModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: []

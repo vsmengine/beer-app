@@ -1,10 +1,18 @@
 .container {
     .pre-header {
+        display: flex;
+        justify-content: space-between;
         padding: 20px;
-        &__serach {
-            .mat-form-field-flex {
-                padding: 0 !important;
+        .mat-form-field-flex {
+            padding: 0 !important;
+            input {
+                padding-left: 10px;
             }
+            .mat-form-field-label {
+                padding-left: 10px;
+            }
+        }
+        &__serach {
             .button  {
                 background: #ccc;
                 height: 41px;
@@ -17,6 +25,9 @@
                 right: 10px;
                 top: -15px;
             }
+        }
+        &__datePicker {
+
         }
     }
 
