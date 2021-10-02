@@ -1,7 +1,7 @@
 <section class="container">
     <div class="list">
         <div class="list__wrapper">
-            <mat-card class="list__item" *ngFor="let item of listData">
+            <mat-card class="list__item" *ngFor="let item of listData" (click)="onMoveToItem(item)">
                 <span class="image">
                     <img src="{{item.image_url}}" alt="Photo of a beer">
                 </span>
@@ -10,5 +10,15 @@
                 </mat-card-content>
             </mat-card>
         </div>
+    </div>
+
+    <div class="paginator">
+        <mat-paginator 
+            [length]="listLength"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="[5, 10, 25, 100]"
+            (page)="changePageOptions($event)"
+            aria-label="Select page">
+        </mat-paginator>
     </div>
 </section>

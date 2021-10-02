@@ -6,7 +6,7 @@ import { DetailComponent } from './detail/detail.component';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { BrowserModule } from '@angular/platform-browser';
     FormsModule,
     BeerRoutingModule,
     MatCardModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: []
