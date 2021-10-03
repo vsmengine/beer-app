@@ -8,6 +8,10 @@ export abstract class BaseComponent {
 
     }
 
+    public sliceText(text: string, endIndex: number, startIndex: number = 0): string {
+        return text.slice(startIndex, endIndex);
+    }
+
 }
 
 export abstract class BaseChildComponent extends BaseComponent {
