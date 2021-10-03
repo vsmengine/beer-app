@@ -93,13 +93,18 @@ export class ListComponent extends BaseListComponent<BeerModel> implements OnIni
     const beersFilter = {
       page: this.pageIndex,
       per_page: this.pageSize,
-      beer_name: this.searchString
+      beer_name: this.searchString.split(' ').join('_')
     };
     this.beerService.requestList(null, beersFilter).pipe(takeUntil(this.ngUnsubscribe)).subscribe(data => {
       if (data.isSuccess()) {
         this.listData = data.getResult();    
       }
     });
+  }
+
+  public onClearSearch() {
+    this.searchString = '';
+    this.processData();
   }
 
   chosenYearHandler(normalizedYear: Moment) {

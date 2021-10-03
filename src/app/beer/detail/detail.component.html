@@ -1,21 +1,64 @@
 <section class="container">
+    <diV class="action">
+        <button mat-raised-button color="primary" [routerLink]="['./../']">Back</button>
+    </diV>
+
     <div class="detail">
         <div class="detail__wrapper" *ngIf="itemData">
             <div class="detail__image">
                 <img src="{{itemData.image_url}}" alt="Photo of a beer">
             </div>
             <div class="detail__info">
-                <h2>{{itemData.name}}</h2>
-                <p>{{itemData.description}}<p>
+                <h2 class="title">{{itemData.name}}</h2>
+                <h2 class="tagline">{{itemData.tagline}}</h2>
+                <p class="description">{{itemData.description}}<p>
+                <table class="ingredients">
+                    <thead>
+                        <h5 class="title">Ingredients</h5>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Malt: </td>
+                            <td>
+                                <ul>
+                                    <li *ngFor="let malt of itemData.ingredients.malt">
+                                        <span>{{malt.name}} - 
+                                            <span class="value">{{malt.amount.value}}</span>
+                                            <span class="unit"> /{{malt.amount.unit}}</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hops: </td>
+                            <td>
+                                <ul>
+                                    <li *ngFor="let hop of itemData.ingredients.hops">
+                                        <span>{{hop.name}} - 
+                                            <span class="value">{{hop.amount.value}}</span>
+                                            <span class="unit"> /{{hop.amount.unit}}</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Yeast: </td>
+                            <td>{{itemData.ingredients.yeast}}</td>
+                        </tr>
+                    </tbody>
+                </table>          
             </div>
         </div>
     </div>
 
     <div class="carousel">
+        <h2 class="subTitle">You may also like ...</h2>
         <carousel>
             <div class="carousel-cell" *ngFor="let item of similarData">
-                <img src="{{item.image_url}}" (click)="onMoveToItem(item)">
-                <span>name</span>
+                <img class="image" src="{{item.image_url}}" (click)="onMoveToItem(item)">
+                <span class="title">{{item.name}}</span>
             </div>
         </carousel>
     </div>

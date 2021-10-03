@@ -3,7 +3,8 @@
         display: flex;
         justify-content: space-between;
         padding: 20px;
-        .mat-form-field-flex {
+        background-color: #f8f8f8;
+        /*.mat-form-field-flex {
             padding: 0 !important;
             input {
                 padding-left: 10px;
@@ -11,19 +12,19 @@
             .mat-form-field-label {
                 padding-left: 10px;
             }
-        }
+        }*/
         &__serach {
-            .button  {
-                background: #ccc;
-                height: 41px;
-                border: none;
-                padding: 14px;
-                margin-left: 5px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: flex-start;
+            button  {
+               margin-top: 4px;
             }
             .close {
                 position: absolute;
                 right: 10px;
                 top: -15px;
+                cursor: pointer;
             }
         }
         &__datePicker {
@@ -39,7 +40,7 @@
             grid-row-gap: 30px;
 
             /* Extra small devices (small mobile phones and up) */
-            @media only screen and (min-width: 320px) {
+            @media only screen and (min-width: 1px) {
                 grid-template-columns: 100%;
                 width: 100%;
             }
@@ -47,19 +48,19 @@
             /* Small devices (portrait tablets, mobile phones and up) */
             @media only screen and (min-width: 568px) {
                 grid-template-columns: 50% 50%;
-                width: calc(100% - 60px);
+                width: calc(100% - 30px);
             }
 
             /* Medium devices (landscape tablets, 768px and up) */
             @media only screen and (min-width: 768px) {
                 grid-template-columns: 33.33% 33.33% 33.33%;
-                width: calc(100% - 80px);
+                width: calc(100% - 60px);
             }
 
             /* Large devices (laptops/desktops, 992px and up) */
             @media only screen and (min-width: 992px) {
                 grid-template-columns: 25% 25% 25% 25%;
-                width: calc(100% - 100px);
+                width: calc(100% - 90px);
             }
 
             /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -69,17 +70,35 @@
             } 
         }
         &__item {
-            padding: 15px;
+            padding: 0px;
+            cursor: pointer;
             .image {
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
                 height: 225px;
-                width: 100%;
+                // width: 100%;
+                // margin-bottom: 15px;
+                padding: 15px 10px;
+                background-color: #e0d7fa;
                 img {
                     display: flex;
                     height: 100%;
                     width: auto;
+                }
+            }
+            .info {
+                padding: 15px 10px;
+                &__name {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                }
+                &__descrption {
+                    
                 }
             }
         }

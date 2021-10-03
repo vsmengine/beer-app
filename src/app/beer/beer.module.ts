@@ -12,12 +12,15 @@ import {MatInputModule} from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { TextTruncatePipe } from '../common/pipes/text-truncate.pipe';
 
 @NgModule({
   declarations: [
     BeerComponent,
     ListComponent,
     DetailComponent,
+    TextTruncatePipe
   ],
   imports: [
     CommonModule,
@@ -30,6 +33,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDatepickerModule,
     MatFormFieldModule,
     MatNativeDateModule,
+    MatButtonModule,
     ReactiveFormsModule,
   ],
   providers: [],
